@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "question": "What is the name of Old Gregg's waters?", 
+
+    "answers": [
+      {
+        "answer": "Lake Cumberland"
+      }, 
+      {
+        "answer": "Black Lake"
+      }, 
+      {
+        "answer": "Purple Lake"
+      }
+    ], 
+    "correct": "Black Lake"
+  },
+  {
+    "id": 2,
+    "question": "Old Gregg showed Howard his...", 
+
+    "answers": [
+      {
+        "answer": "Bailey's supply"
+      }, 
+      {
+        "answer": "Tutu collection"
+      }, 
+      {
+        "answer": "Down stairs mix-up"
+      }
+    ], 
+    "correct": "Down stairs mix-up"
+  },
+  {
+    "id": 3,
+    "question": "Howard pulled up Old Gregg with...", 
+
+    "answers": [
+      {
+        "answer": "His fishing net"
+      }, 
+      {
+        "answer": "His strong arms"
+      }, 
+      {
+        "answer": "His harpoon"
+      }
+    ], 
+    "correct": "Down stairs mix-up"
+  },
+  {
+    "id": 4,
+    "question": "What does Old Gregg call his home?", 
+
+    "answers": [
+      {
+        "answer": "Gregg's Lair"
+      }, 
+      {
+        "answer": "Gregg's Place"
+      }, 
+      {
+        "answer": "Mi Casa"
+      }
+    ], 
+    "correct": "Gregg's Place"
+  },
+  {
+    "id": 5,
+    "question": "Old Gregg showed Howard his...", 
+
+    "answers": [
+      {
+        "answer": "Baileys cabinet"
+      }, 
+      {
+        "answer": "Tutu collection"
+      }, 
+      {
+        "answer": "Down stairs mix-up"
+      }
+    ], 
+    "correct": "Down stairs mix-up"
+  },
+  {
+    "id": 6,
+    "question": "What drink does Old Gregg offer Howard?", 
+
+    "answers": [
+      {
+        "answer": "Tea"
+      }, 
+      {
+        "answer": "Pepsi"
+      }, 
+      {
+        "answer": "Baileys"
+      }
+    ], 
+    "correct": "Baileys"
+  },
+  {
+    "id": 7,
+    "question": "What is the name of Old Gregg's water color painting?", 
+
+    "answers": [
+      {
+        "answer": "Old Gregg"
+      }, 
+      {
+        "answer": "Queen Elizabeth"
+      }, 
+      {
+        "answer": "Starry Night"
+      }
+    ], 
+    "correct": "Old Gregg"
+  },
+  {
+    "id": 8,
+    "question": "What is Oldd Gregg?", 
+
+    "answers": [
+      {
+        "answer": "Man Fish"
+      }, 
+      {
+        "answer": "Woman"
+      }, 
+      {
+        "answer": "Mermaid"
+      }
+    ], 
+    "correct": "Man Fish"
+  },
+  {
+    "id": 9,
+    "question": "What is the song called that Old Gregg sings?", 
+
+    "answers": [
+      {
+        "answer": "Do ya hate me?"
+      }, 
+      {
+        "answer": "Do ya love me?"
+      }, 
+      {
+        "answer": "Do you like Baileys?"
+      }
+    ], 
+    "correct": "Do ya love me?"
+  },
+  {
+    "id": 10,
+    "question": "What does Old Gregg have that no one else does?", 
+
+    "answers": [
+      {
+        "answer": "The funk"
+      }, 
+      {
+        "answer": "Baileys"
+      }, 
+      {
+        "answer": "Curly Jefferson"
+      }
+    ], 
+    "correct": "The funk"
+  }
+]
