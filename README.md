@@ -1,7 +1,7 @@
 # quiz-api
 An API for getting multiple choice quiz questions and validating answers to check if they are correct. 
 
-As of today there is only one quiz available. How well do you know old greg? Available at quizzes.raineworks.com/api/old-greg.
+As of today there is only one quiz available. How well do you know old greg? Available at quizzes.raineworks.com/api/old-greg/quiz.
 
 Use "quizzes.raineworks.com/api/${quiz-name}/quiz" to get the quiz questions, multiple choice answers, and correct answer. 
 To check if a users answer to a question is correct use "quizzes.raineworks.com/api/${quiz-name}/validate?id=${id}&answer=${answer}". 
