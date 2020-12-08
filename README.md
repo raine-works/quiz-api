@@ -3,7 +3,7 @@ An API for getting multiple choice quiz questions and validating answers to chec
 
 As of today there is only one quiz available. How well do you know old greg? Available at quizzes.raineworks.com/api/old-greg.
 
-Use "quizzes.raineworks.com/api/${quiz-name}/quiz" to get the quiz questions, multiple choice questions, and correct answer. 
+Use "quizzes.raineworks.com/api/${quiz-name}/quiz" to get the quiz questions, multiple choice answers, and correct answer. 
 To check if a users answer to a question is correct use "quizzes.raineworks.com/api/${quiz-name}/validate?id=${id}&answer=${answer}". 
 By passing the ID and answer in the params object of your request you will recieve either a TRUE or FALSE response. 
 
