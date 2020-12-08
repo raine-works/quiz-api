@@ -9,5 +9,5 @@ By passing the ID and answer in the params object of your request you will recie
 
 More quizzes coming soon. 
 
-If you would like to build off what I've started feel free to clonse this repo. 
+If you would like to build off what I've started feel free to clone this repo. 
 CD into the functions directory and run "npm install" to install the required node packages. 
