@@ -9,6 +9,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // API Endpoints.
-app.use('/api/old-greg', require('./api/old-greg/index'));
+app.use('/api', require('./api/old-greg/index'));
 
 exports.app = functions.https.onRequest(app);

@@ -7,14 +7,20 @@
   },
   "hosting": {
     "public": "public",
-    "rewrites": [{
-      "source": "**", 
-      "function": "app"
-    }],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "app"
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
   }
 }
