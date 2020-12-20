@@ -1,13 +1,14 @@
 # quiz-api
 An API for getting multiple choice quiz questions and validating answers to check if they are correct. 
 
-As of today there is only one quiz available. How well do you know old greg? Available at quizzes.raineworks.com/api/old-greg/quiz.
+As of today there is only one quiz available. How well do you know old greg? Available at quizzes.raineworks.com/api/quiz/old-greg
 
-Use "quizzes.raineworks.com/api/${quiz-name}/quiz" to get the quiz questions, multiple choice answers, and correct answer. 
-To check if a users answer to a question is correct use "quizzes.raineworks.com/api/${quiz-name}/validate?id=${id}&answer=${answer}". 
-By passing the ID and answer in the params object of your request you will recieve either a TRUE or FALSE response. 
+To use this API you can retrieve a quiz by sending a get request to quizzes.raineworks.com/api/quiz/[ID]
 
-More quizzes coming soon. 
+Example: The ID for the Old Greg quiz is "old-greg", quizzes.raineworks.com/api/quiz/old-greg. 
 
-If you would like to build off what I've started feel free to clone this repo. 
-CD into the functions directory and run "npm install" to install the required node packages. 
+To validate if an answer to a question is corret send a GET request to quizzes.raineworks.com/api/validate/[ID]?id=[ID]&answer=[ANSWER]
+
+Example: quizzes.raineworks.com/api/validate/old-greg?id=1&answer=Black_Lake
+
+
