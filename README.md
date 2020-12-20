@@ -3,7 +3,7 @@ An API for getting multiple choice quiz questions and validating answers to chec
 
 As of today there is only one quiz available. How well do you know old greg? Available at quizzes.raineworks.com/api/quiz/old-greg
 
-To use this API you can retrieve a quiz by sending a get request to quizzes.raineworks.com/api/quiz/[ID]
+To use this API you can retrieve a quiz by sending a GET request to quizzes.raineworks.com/api/quiz/[ID]
 
 Example: The ID for the Old Greg quiz is "old-greg", quizzes.raineworks.com/api/quiz/old-greg. 
 
