@@ -29,13 +29,13 @@ router.get('/quiz/:id', (req, res) => {
               answers: doc.data().questions[i].answers
             };
             resData.push(q);
-          };
+          }
           res.status(200).json(resData);
-        };
+        }
       })
     })
-    .catch((err) => {
-      console.log(err);
+    .catch((error) => {
+      console.log(error);
     })
   })(req.params.id);
 
@@ -58,20 +58,20 @@ router.get('/validate/:id', (req, res) => {
             let questions = doc.data().questions;
             for(let i = 0; i < questions.length; i++) {
               if(questions[i].id === qId) {
-                if(questions[i].correct == answer) {
+                if(questions[i].correct === answer) {
                   res.status(200).json('true');
                 } else {
                   res.status(200).json('false');
-                };
-              };
-            };
-          };
+                }
+              }
+            }
+          }
         })
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        console.log(error);
       })
-    };
+    }
   })(req.params.id, parseInt(req.query.id), req.query.answer);
 
 });
@@ -83,6 +83,6 @@ function validate(req) {
     answer: Joi.string().max(400).required()
   });
   return schema.validate(req);
-};
+}
 
 module.exports = router; 
