@@ -1,24 +1,14 @@
 # quiz-api
+An API for getting multiple choice quiz questions and validating answers to check if they are correct. 
 
-## Project setup
-```
-npm install
-```
+As of today there is only one quiz available. How well do you know old greg? Available at quizzes.raineworks.com/api/quiz/old-greg
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+To use this API you can retrieve a quiz by sending a GET request to quizzes.raineworks.com/api/quiz/[ID]
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Example: The ID for the Old Greg quiz is "old-greg", quizzes.raineworks.com/api/quiz/old-greg. 
 
-### Lints and fixes files
-```
-npm run lint
-```
+To validate if an answer to a question is corret send a GET request to quizzes.raineworks.com/api/validate/[ID]?id=[ID]&answer=[ANSWER]
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Example: quizzes.raineworks.com/api/validate/old-greg?id=1&answer=Black_Lake
+
+
