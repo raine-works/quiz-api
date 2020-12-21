@@ -3,12 +3,19 @@
     "source": "functions"
   },
   "hosting": {
-    "public": "public",
+    "public": "dist",
     "rewrites": [
       {
-        "source": "**",
+        "source": "/api/**", 
         "function": "app"
+      }, 
+      {
+        "source": "**",
+        "destination": "/index.html"
       }
+    ],
+    "predeploy": [
+      "npm run build"
     ],
     "ignore": [
       "firebase.json",
