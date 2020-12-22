@@ -18,6 +18,9 @@ export default {
     activeQuiz() {
       return this.$store.state.quizzes.activeQuiz
     }
+  }, 
+  methods: {
+    
   }
 }
 </script>
