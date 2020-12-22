@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>{{ activeQuiz }}</h1>
+    <h1 v-if="activeQuiz">We got it!</h1>
+    <h1 v-if="loading">Content is loading...</h1>
   </div>
 </template>
 
@@ -17,6 +18,9 @@ export default {
   computed: {
     activeQuiz() {
       return this.$store.state.quizzes.activeQuiz
+    }, 
+    loading() {
+      return this.$store.state.quizzes.loading
     }
   }
 }

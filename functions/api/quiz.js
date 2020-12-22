@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Joi = require('joi');
 const admin = require('firebase-admin');
-const { func } = require('joi');
 
 admin.initializeApp({
   credential: admin.credential.applicationDefault()
@@ -16,7 +15,7 @@ router.get('/quiz/:id', (req, res) => {
     db.collection('quizzes').where('name', '==', requestedData).get()
     .then((snapshot) => {
       snapshot.forEach(doc => {
-        if(!doc.data()) {
+        if(!doc) {
           res.status(404).json('No matching quizzes...');
         } else {
 
@@ -52,7 +51,7 @@ router.get('/validate/:id', (req, res) => {
       db.collection('quizzes').where('name', '==', quiz).get()
       .then((snapshot) => {
         snapshot.forEach(doc => {
-          if(!doc.data()) {
+          if(!doc) {
             res.status(404).json('No matching quizzes...');
           } else {
             let questions = doc.data().questions;

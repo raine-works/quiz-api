@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const state = () => ({
 
-  activeQuiz: { /* Empty object */ }, 
+  activeQuiz: null, 
   loading: false
 
 })
