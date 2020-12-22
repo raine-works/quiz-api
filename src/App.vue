@@ -10,12 +10,6 @@ export default {
     return {
       // Data goes here...
     }
-  }, 
-  watch: {
-    '$route' (to) {
-      document.title = to.meta.title
-    }, 
-    immediate: true
   }
 }
 </script>

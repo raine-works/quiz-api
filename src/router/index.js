@@ -52,7 +52,7 @@ const routes = [
     name: 'Quiz', 
     component: Quiz, 
     meta: {
-      title: 'Quiz', 
+      title: 'Quiz',
       metaTags: [
         {
           name: '', 
@@ -71,6 +71,16 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+// Dynamically updates the page title.
+router.beforeEach((to, from, next) => {
+  if(to.name == 'Quiz') {
+    document.title = `${to.params.id} - ${to.meta.title}`
+  } else {
+    document.title = to.meta.title
+  }
+  next()
 })
 
 export default router
