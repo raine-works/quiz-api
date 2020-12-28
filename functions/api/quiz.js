@@ -14,11 +14,10 @@ router.get('/quiz/:id', (req, res) => {
   (function (requestedData) {
     db.collection('quizzes').where('name', '==', requestedData).get()
     .then((snapshot) => {
-      snapshot.forEach(doc => {
-        if(!doc) {
-          res.status(404).json('No matching quizzes...');
-        } else {
-
+      if(snapshot.empty) {
+        res.status(404).json('No matching quizzes...');
+      } else {
+        snapshot.forEach(doc => {
           // Prevents the correct answers from being sent to the front end.
           let resData = [];
           for(let i = 0; i < doc.data().questions.length; i++) {
@@ -30,8 +29,8 @@ router.get('/quiz/:id', (req, res) => {
             resData.push(q);
           }
           res.status(200).json(resData);
-        }
-      })
+        })
+      }
     })
     .catch((error) => {
       console.log(error);
@@ -50,10 +49,10 @@ router.get('/validate/:id', (req, res) => {
     } else {
       db.collection('quizzes').where('name', '==', quiz).get()
       .then((snapshot) => {
-        snapshot.forEach(doc => {
-          if(!doc) {
-            res.status(404).json('No matching quizzes...');
-          } else {
+        if(snapshot.empty) {
+          res.status(404).json('No matching quizzes...');
+        } else {
+          snapshot.forEach(doc => {
             let questions = doc.data().questions;
             for(let i = 0; i < questions.length; i++) {
               if(questions[i].id === qId) {
@@ -64,8 +63,8 @@ router.get('/validate/:id', (req, res) => {
                 }
               }
             }
-          }
-        })
+          })
+        }
       })
       .catch((error) => {
         console.log(error);

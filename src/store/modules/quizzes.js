@@ -15,16 +15,29 @@ const actions = {
   
   // Get quiz from slug.
   async getQuiz(context, quizId) {
+    let quiz;
 
     // Triggers loading state to TRUE while waiting for response data.
     context.commit('isLoading')
 
-    const response = await axios.get(`https://quizzes.raineworks.com/api/quiz/${quizId}`)
-    let quiz = response.data
-    context.commit('getQuiz', quiz)
+    axios.get(`https://quizzes.raineworks.com/api/quiz/${quizId}`)
+    .then((res) => {
+      quiz = res.data
 
-    // Triggers loading state to FALSE when data is resolved. 
-    context.commit('isLoading')
+      context.commit('getQuiz', quiz)
+
+      // Triggers loading state to FALSE when data is resolved.
+      context.commit('isLoading')
+    })
+    .catch((err) => {
+      console.log(`${err.message}. There is no quiz by that name...`)
+      quiz = '404'
+
+      context.commit('getQuiz', quiz)
+
+      // Triggers loading state to FALSE when data is resolved.
+      context.commit('isLoading')
+    }) 
   }, 
 
   isLoading(context) {

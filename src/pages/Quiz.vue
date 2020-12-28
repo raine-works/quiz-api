@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 v-if="activeQuiz">We got it!</h1>
+    <h1 v-if="activeQuiz">We got the data!</h1>
     <h1 v-if="loading">Content is loading...</h1>
   </div>
 </template>
@@ -14,13 +14,20 @@ export default {
   }, 
   beforeCreate() {
     this.$store.dispatch('getQuiz', this.$route.params.id)
-  }, 
+  },
   computed: {
     activeQuiz() {
       return this.$store.state.quizzes.activeQuiz
     }, 
     loading() {
       return this.$store.state.quizzes.loading
+    }
+  }, 
+  watch: {
+    activeQuiz(newVal) {
+      if(newVal === '404') {
+        this.$router.push('/404');
+      }
     }
   }
 }
