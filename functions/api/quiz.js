@@ -8,6 +8,22 @@ admin.initializeApp({
 });
 const db = admin.firestore();
 
+// Gets a list of all available quizes. 
+router.get('/quiz/all', (req, res) => {
+  let list = [];
+  db.collection('quizzes').get()
+  .then((snapshot) => {
+    snapshot.forEach(doc => {
+      let quizData = {
+        name: doc.data().name, 
+        id: doc.data().name
+      };
+      list.push(quizData);
+    });
+    res.status(200).json(list);
+  });
+});
+
 // Gets quiz questions and available multiple choice answers.
 router.get('/quiz/:id', (req, res) => {
 

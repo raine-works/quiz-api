@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../pages/Home.vue'
-import Quiz from '../pages/Quiz.vue'
-import FourZeroFour from '../pages/FourZeroFour.vue'
+import Home from '@/pages/Home.vue'
+import Quiz from '@/pages/Quiz.vue'
+import FourZeroFour from '@/pages/FourZeroFour.vue'
+import Contact from '@/pages/Contact.vue'
 
 Vue.use(VueRouter)
 
@@ -64,7 +65,25 @@ const routes = [
         }
       ]
     }
-  }
+  }, 
+  {
+    path: '/contact', 
+    name: 'Contact', 
+    component: Contact, 
+    meta: {
+      title: 'Contact Me', 
+      metaTags: [
+        {
+          name: '', 
+          content: ''
+        }, 
+        {
+          property: '', 
+          content: ''
+        }
+      ]
+    }
+  },
 ]
 
 const router = new VueRouter({

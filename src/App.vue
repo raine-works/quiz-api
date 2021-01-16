@@ -10,10 +10,17 @@ export default {
     return {
       // Data goes here...
     }
+  }, 
+  beforeCreate() {
+    this.$store.dispatch('getQuizList')
   }
 }
 </script>
 
 <style>
+
+* {
+  margin: 0;
+}
 
 </style>

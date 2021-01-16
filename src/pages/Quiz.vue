@@ -1,17 +1,27 @@
 <template>
   <div>
-    <h1 v-if="activeQuiz">We got the data!</h1>
-    <h1 v-if="loading">Content is loading...</h1>
+    <Nav/>
+    <div class="content-container">
+      <ScoreBar/>
+    </div>
   </div>
 </template>
 
 <script>
+import Nav from '@/components/Nav.vue'
+import ScoreBar from '@/components/ScoreBar.vue'
+
 export default {
   data() {
     return {
       // Stuff goes here
+      scoreSheet: null,
     }
-  }, 
+  },
+  components: {
+    Nav,
+    ScoreBar,
+  },
   beforeCreate() {
     this.$store.dispatch('getQuiz', this.$route.params.id)
   },
@@ -34,5 +44,10 @@ export default {
 </script>
 
 <style>
+
+.content-container {
+  max-width: 1000px;
+  margin: auto;
+}
 
 </style>

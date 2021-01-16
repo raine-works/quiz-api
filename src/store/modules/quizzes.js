@@ -2,6 +2,7 @@ import axios from 'axios'
 
 const state = () => ({
 
+  quizList: null,
   activeQuiz: null, 
   loading: false
 
@@ -12,6 +13,21 @@ const getters = {
 }
 
 const actions = {
+
+  // Get all quizzes. 
+  async getQuizList(context) {
+    let quizList;
+
+    context.commit('isLoading')
+
+    axios.get('https://quizzes.raineworks.com/api/quiz/all')
+    .then((res) => {
+      quizList = res.data
+      context.commit('getQuizList', quizList)
+
+      context.commit('isLoading')
+    })
+  },
   
   // Get quiz from slug.
   async getQuiz(context, quizId) {
@@ -47,6 +63,11 @@ const actions = {
 }
 
 const mutations = {
+
+  // Get all quizzes on site load. 
+  getQuizList(state, list) {
+    state.quizList = list
+  },
   
   // Add requested quiz data to the activeQuiz object.
   getQuiz(state, quiz) {
