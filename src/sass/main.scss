@@ -1,0 +1,26 @@
+@import '@/sass/_variables.scss';
+@import '@/sass/_mixins.scss';
+
+@include google-font('Roboto');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#app {
+  padding: 0px;
+  margin: 0px;
+  font-family: $standard-font;
+  min-height: 100vh;
+
+  &.light {
+    background-color: $white;
+    color: $light-gray;
+  }
+  
+  &.dark {
+    background-color: $dark-primary;
+    color: $white;
+  }
+}
